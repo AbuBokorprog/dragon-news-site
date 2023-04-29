@@ -15,10 +15,13 @@ const LeftCon = () => {
     <div>
       <h3>All Category</h3>
       <div>
-        {catagories.map((c) => (
-          <p key={c.id}>
-            <Link to="" className="text-decoration-none">
-              {c.name}
+        {catagories.map((category) => (
+          <p key={category.id}>
+            <Link
+              to={`/category/${category.id}`}
+              className="text-decoration-none text-secondary"
+            >
+              {category.name}
             </Link>
           </p>
         ))}
